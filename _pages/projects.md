@@ -4,34 +4,70 @@ title: Projects
 permalink: /projects/
 ---
 
-An overview of my past and ongoing projects.
+> An overview of my past and ongoing projects.
 
 ## INTERNSHIP 2025 (ongoing): Confidence-based safety properties in <a href="https://www.caisar-platform.com/" target="_blank">CAISAR</a>
 
 **CAISAR public repository:** <a href="https://git.frama-c.com/pub/caisar/" target="_blank">gitlab</a>
 
-## INTERNSHIP 2024: Symbolic execution directed by A*
+With the increasing use of machine learning (ML) in our daily life systems
+comes the need to certify that these systems are working properly.
+However, certifying that a ML model is completely safe is yet not feasible,
+but it is possible to specify and verify some properties to obtain formal
+guarantees on the behavior of a model.
+Currently, the properties that are effectively provable are local robustness
+and some variants.
+This is only a narrow set of properties, and it could be interesting to be
+able to verify more general properties such as global robustness and global
+fairness.
+
+To this aim, the notion of confidence-based safety property have been recently
+introduced by
+<a href="https://arxiv.org/abs/2405.14400" target="_blank">Athavale et al.</a>,
+where the safety of a neural network is examined by additionally considering
+the confidence of the model on its predictions.
+Yet, only a proof of concept implemented in Marabou, a tool for verifying neural
+networks, exists, making this approach difficult to apply on a wider scale.
+Indeed, one would want to specify and prove such properties in other provers,
+for instance PyRAT or Beta-CROWN.
+
+The goal of my internship is to be able to write an efficient formal
+specification of confidence-based safety properties in CAISAR, an open source
+platform for the specification and verification of machine learning models
+which unifies the interface for several AI verification tools. Such feature
+would represent a generalization of the concept of confidence-based safety
+properties by making it available for a wide range of provers that are
+supported by CAISAR.
+
+## INTERNSHIP 2024: Symbolic execution directed by A\*
 
 **Project repository:** <a href="https://github.com/gardouin/klee-reach" target="_blank">github</a><br>
 **Documentation:** <a href="../upload/klee_reach_developer_manual.pdf" target="_blank">pdf</a><br>
 **User manual:** <a href="../upload/klee_reach_user_manual.pdf" target="_blank">pdf</a>
 
-L'exécution symbolique est une approche peu efficace sur des programmes de grande taille : c'est une conséquence de l'explosion du nombre de chemins dans l'arbre d'exécution, voire de la potentielle infinité de l'arbre d'exécution symbolique. Il est tout de même possible d'envisager de nouvelles heuristiques pour améliorer cette approche. Des <a href="https://link.springer.com/chapter/10.1007/978-3-031-47115-5_4" target="_blank">travaux réalisés par mes encadrants</a> s'intéressent à cette problématique et ont débouché sur deux nouvelles stratégies de recherche inspirées par l'algorithme A*. Ces heuristiques ont été implémentées dans <a href="https://binsec.github.io/" target="_blank">BINSEC</a>, un outil utilisant de l'exécution symbolique pour des programmes binaires. Cependant, ces approches peuvent également être implémentées dans d'autres outils, comme <a href="https://klee-se.org/" target="_blank">KLEE</a>, qui permet de faire de l'exécution symbolique sur des programmes écrits dans des langages de plus haut niveau. L'objectif de mon stage était donc d'implémenter ces heuristiques de recherche dans KLEE, ainsi que toutes les fonctionnalités nécessaires pour faire de l'analyse d'atteignabilité avec ce programme.
+Symbolic execution is an inefficient approach for large programs: this is a consequence of the explosion in the number of paths in the execution tree, and even the potential infinity of the symbolic execution tree. It is nevertheless possible to consider new heuristics to improve this approach. <a href="https://link.springer.com/chapter/10.1007/978-3-031-47115-5_4" target="_blank">Work carried out by my supervisors</a> addresses this problem and has led to two new search strategies inspired by the A\* algorithm. These heuristics have been implemented in <a href="https://binsec.github.io/" target="_blank">BINSEC</a>, a tool that uses symbolic execution for binary programs. However, these approaches can also be implemented in other tools, such as <a href="https://klee-se.org/" target="_blank">KLEE</a>, which enables symbolic execution on programs written in higher-level languages. The aim of my internship was therefore to implement these search heuristics in KLEE, as well as all the functionality required to perform reachability analysis with this program.
 
-Mon travail a donc débouché sur la conception d'une extension de KLEE permettant d'utiliser ces nouvelles heuristiques.
-J'ai notamment dû réfléchir à la problématique de rendre KLEE capable de faire de l'analyse d'atteignabilité, car cet outil n'a pas initialement été conçu pour ça.
-J'ai ensuite pu m'inspirer du fonctionnement des heuristiques existantes dans KLEE afin d'implémenter les nouvelles heuristiques A\*.
-La réalisation de ces heuristiques a également nécessité l'ajout de fonctionnalités comme la collecte de certaines informations lors de l'exécution symbolique.
-Enfin, les heuristiques A* prenant en compte la distance entre une instruction et la cible à atteindre, j'ai également conçu un outil externe, développé en Python, afin de calculer ces distances et de les utiliser dans les nouvelles stratégies d'exploration.
+My work therefore led to the design of an extension to KLEE enabling these new heuristics to be used. In particular, I had to think about the problem of making KLEE capable of carrying out reachability analysis, as the tool was not initially designed for this. I was then able to draw inspiration from the way existing heuristics work in KLEE in order to implement the new A\* heuristics. The implementation of these heuristics also required the addition of features such as the collection of certain information during symbolic execution. Finally, as the A\* heuristics take into account the distance between an instruction and the target to be reached, I also designed an external tool, developed in Python, to calculate these distances and use them in the new exploration strategies.
+
+<!-- L'exécution symbolique est une approche peu efficace sur des programmes de grande taille : c'est une conséquence de l'explosion du nombre de chemins dans l'arbre d'exécution, voire de la potentielle infinité de l'arbre d'exécution symbolique. Il est tout de même possible d'envisager de nouvelles heuristiques pour améliorer cette approche. Des travaux réalisés par mes encadrants</a> s'intéressent à cette problématique et ont débouché sur deux nouvelles stratégies de recherche inspirées par l'algorithme A*. Ces heuristiques ont été implémentées dans <a href="https://binsec.github.io/" target="_blank">BINSEC</a>, un outil utilisant de l'exécution symbolique pour des programmes binaires. Cependant, ces approches peuvent également être implémentées dans d'autres outils, comme <a href="https://klee-se.org/" target="_blank">KLEE</a>, qui permet de faire de l'exécution symbolique sur des programmes écrits dans des langages de plus haut niveau. L'objectif de mon stage était donc d'implémenter ces heuristiques de recherche dans KLEE, ainsi que toutes les fonctionnalités nécessaires pour faire de l'analyse d'atteignabilité avec ce programme. -->
+
+<!-- Mon travail a donc débouché sur la conception d'une extension de KLEE permettant d'utiliser ces nouvelles heuristiques. J'ai notamment dû réfléchir à la problématique de rendre KLEE capable de faire de l'analyse d'atteignabilité, car cet outil n'a pas initialement été conçu pour ça. J'ai ensuite pu m'inspirer du fonctionnement des heuristiques existantes dans KLEE afin d'implémenter les nouvelles heuristiques A\*. La réalisation de ces heuristiques a également nécessité l'ajout de fonctionnalités comme la collecte de certaines informations lors de l'exécution symbolique. Enfin, les heuristiques A* prenant en compte la distance entre une instruction et la cible à atteindre, j'ai également conçu un outil externe, développé en Python, afin de calculer ces distances et de les utiliser dans les nouvelles stratégies d'exploration. -->
 
 ## INTERNSHIP 2023: Development of a Visual Studio Code extension for <a href="https://github.com/ticktac-project/tchecker" target="_blank">TChecker</a>
 
 **Project repository:** <a href="https://github.com/gardouin/tchecker-vscode" target="_blank">github</a><br>
 **Documentation:** <a href="../upload/tchecker_vscode_documentation.pdf" target="_blank">pdf</a>
 
-TChecker est un outil de vérification par model-checking de systèmes temps-réel, développé au LaBRI par <a href="https://www.labri.fr/perso/herbrete/" target="_blank">Frédéric Herbreteau</a> et <a href="https://www.labri.fr/profil/Point_ID1084917772" target="_blank">Gérald Point</a>. Il est également utilisé par plusieurs chercheurs, en France et en Inde notamment, pour développer et tester leurs propres algorithmes de vérification. TChecker est constitué de plusieurs outils permettant notamment la validation syntaxique des modèles, leur simulation, et la vérification formelles ce ces modèles.
+TChecker is a model-checking verification tool for real-time systems, developed at the <a href="https://www.labri.fr/" target="_blank">LaBRI</a> by <a href="https://www.labri.fr/perso/herbrete/" target="_blank">Frédéric Herbreteau</a> and <a href="https://www.labri.fr/profil/Point_ID1084917772" target="_blank">Gérald Point</a>. It is also used by several researchers, notably in France and India, to develop and test their own verification algorithms. TChecker is made up of a number of tools for validating models syntactically, simulating them and verifying them formally.
 
-Afin de faciliter l'utilisation des différents outils de TChecker, j'ai développé une extension pour Visual Studio Code, permettant principalement :
-- la coloration syntaxique des modèles
+In order to facilitate the use of the various TChecker tools, I have developed an extension for Visual Studio Code, which mainly allows:
+- syntax highlighting of models
+- editing assistance (auto-completion, signature display, hover)
+- use of TChecker tools in the VSCode environment
+
+<!-- TChecker est un outil de vérification par model-checking de systèmes temps-réel, développé au LaBRI par <a href="https://www.labri.fr/perso/herbrete/" target="_blank">Frédéric Herbreteau</a> et <a href="https://www.labri.fr/profil/Point_ID1084917772" target="_blank">Gérald Point</a>. Il est également utilisé par plusieurs chercheurs, en France et en Inde notamment, pour développer et tester leurs propres algorithmes de vérification. TChecker est constitué de plusieurs outils permettant notamment la validation syntaxique des modèles, leur simulation, et la vérification formelles ce ces modèles. -->
+
+<!-- Afin de faciliter l'utilisation des différents outils de TChecker, j'ai développé une extension pour Visual Studio Code, permettant principalement : -->
+<!-- - la coloration syntaxique des modèles
 - l'assistance à l'édition (auto-complétion, affichage des signatures, hover)
-- l'utilisation des outils de TChecker dans l'environnement de VSCode
+- l'utilisation des outils de TChecker dans l'environnement de VSCode -->
