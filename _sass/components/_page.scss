@@ -21,11 +21,11 @@
 }
 
 .c-page__footer {
-    margin-bottom: 10rem;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
+    margin-bottom: 5rem;
+    // display: -webkit-box;
+    // display: -webkit-flex;
+    // display: -ms-flexbox;
+    // display: flex;
     -webkit-flex-wrap: wrap;
         -ms-flex-wrap: wrap;
             flex-wrap: wrap;
@@ -37,6 +37,7 @@
     -webkit-align-items: center;
         -ms-flex-align: center;
             align-items: center;
+    text-align: center;
     p {
         @include fs--body;
         color: $c-base__01;
