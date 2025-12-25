@@ -3,11 +3,27 @@
     <hr>
 	{% if page.title == 'Home' %}
     <p>
-        <a href="{{ "/" | prepend: site.baseurl }}">Home</a><span class="u-separate"></span> <a href="{{ "/projects/" | prepend: site.baseurl }}">Projects</a>
+        <a href="{{ "/" | prepend: site.baseurl }}">Home</a>
+        <span class="u-separate"></span>
+        <a href="{{ "/teaching/" | prepend: site.baseurl }}">Teaching</a>
+        <a class="r-pos" href="{{ "/fr/" | prepend: site.baseurl }}">🇫🇷 Français</a>
+    </p>
+    {% elsif page.title == 'Accueil' %}
+    <p>
+        <a href="{{ "/fr/" | prepend: site.baseurl }}">Accueil</a>
+        <span class="u-separate"></span>
+        <a href="{{ "/teaching/fr/" | prepend: site.baseurl }}">Enseignement</a>
+        <a class="r-pos" href="{{ ".." | prepend: site.baseurl }}">🏴󠁧󠁢󠁥󠁮󠁧󠁿 English</a>
     </p>
 	{% else %}
     <p>
+        {% if page.is_french %}
+        <a href="{{ "/fr/" | prepend: site.baseurl }}">&lt;&ndash; Retour</a>
+        <a class="r-pos" href="{{ ".." | prepend: site.baseurl }}">🏴󠁧󠁢󠁥󠁮󠁧󠁿 English</a>
+        {% else %}
         <a href="{{ "/" | prepend: site.baseurl }}">&lt;&ndash; Back</a>
+        <a class="r-pos" href="{{ "fr/" | prepend: site.baseurl }}">🇫🇷 Français</a>
+        {% endif %}
     </p>
 	{% endif %}
     <hr>
