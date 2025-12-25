@@ -18,4 +18,12 @@
 <url>
 <loc>http://localhost:4000/teaching/fr/</loc>
 </url>
+<url>
+<loc>http://localhost:4000/upload/cv2526_en.pdf</loc>
+<lastmod>2025-12-25T17:21:49+01:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/upload/cv2526_fr.pdf</loc>
+<lastmod>2025-12-25T17:24:10+01:00</lastmod>
+</url>
 </urlset>
