@@ -20,7 +20,7 @@ En particulier, je travaille sur l'extension de l'expressivité des langages de 
 
 <p><b>Contact :</b> <a href="mailto:guilhem.ardouin@cea.fr">guilhem.ardouin [at] cea [dot] fr</a></p>
 
-<p><b>Curriculum Vitae :</b> <a href="../upload/cv2526_en.pdf" target="_blank">Version anglaise 🏴󠁧󠁢󠁥󠁮󠁧󠁿</a> | <a href="../upload/cv2526_fr.pdf" target="_blank">Version française 🇫🇷</a></p>
+<p><b>Curriculum Vitae :</b> <a href="../upload/cv2526_en.pdf" target="_blank">Version anglaise 🇬🇧</a> | <a href="../upload/cv2526_fr.pdf" target="_blank">Version française 🇫🇷</a></p>
 
 <h2>🎓 Formation</h2>
 

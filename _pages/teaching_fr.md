@@ -10,5 +10,5 @@ is_french: true
 ## Année 2025 - 2026
 
 **Advanced Programming (CentraleSupélec)**<br>
-*2ème année Bachelor of Engineering* (🏴󠁧󠁢󠁥󠁮󠁧󠁿)<br> 
+*2ème année Bachelor of Engineering* (🇬🇧)<br> 
 Java et programmation orientée objet, TPs (12h)
