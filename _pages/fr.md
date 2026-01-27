@@ -40,5 +40,5 @@ En particulier, je travaille sur l'extension de l'expressivité des langages de 
 <p style="text-align: left;">
     <b>La confiance avec le contrôle : spécification et vérification d'hyperpropriétés sur réseaux de neurones</b><br>
     Guilhem Ardouin, Michele Alberti, Julien Girard-Satabin, <i><a href="https://jfla.inria.fr/jfla2026.html" target="_blank">JFLA 2026</a></i><br>
-    <a href="#" target="_blank">PDF</a>, <a href="#" target="_blank">Présentation</a>
+    <a href="#" target="_blank">PDF</a>, <a href="upload/jfla26/talk.pdf" target="_blank">Présentation</a>
 </p>
