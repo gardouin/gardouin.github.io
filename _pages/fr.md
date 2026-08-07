@@ -20,7 +20,7 @@ En particulier, je travaille sur l'extension de l'expressivité des langages de 
 
 <p><b>Contact :</b> <a href="mailto:guilhem.ardouin@cea.fr">guilhem.ardouin [at] cea [dot] fr</a></p>
 
-<p><b>Curriculum Vitae :</b> <a href="../upload/cv2526_en.pdf" target="_blank">Version anglaise 🇬🇧</a> | <a href="../upload/cv2526_fr.pdf" target="_blank">Version française 🇫🇷</a></p>
+<!-- <p><b>Curriculum Vitae :</b> <a href="../upload/cv2526_en.pdf" target="_blank">Version anglaise 🇬🇧</a> | <a href="../upload/cv2526_fr.pdf" target="_blank">Version française 🇫🇷</a></p> -->
 
 <h2>🎓 Formation</h2>
 
@@ -36,6 +36,12 @@ En particulier, je travaille sur l'extension de l'expressivité des langages de 
 </ul>
 
 <h2>&#128196; Publications</h2>
+
+<p style="text-align: left;">
+    <b>Principled Rewriting of ONNX Operators for Reluctant Solvers</b><br>
+    Alban Grastien, Guilhem Ardouin, Julien Girard-Satabin, <i><a href="https://aiverification.org/2026/" target="_blank">SAIV 2026</a></i><br>
+    <a href="https://link.springer.com/chapter/10.1007/978-3-032-32357-6_3" target="_blank">Actes</a>
+</p>
 
 <p style="text-align: left;">
     <b>La confiance avec le contrôle : spécification et vérification d'hyperpropriétés sur réseaux de neurones</b><br>
